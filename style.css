@@ -1,0 +1,159 @@
+:root {
+  /* colors */
+  --clr-bg: hsl(222, 100%, 97%);
+  --clr-primary: hsl(235, 44%, 16%);
+  --clr-secondary: hsl(235, 8%, 73%);
+  --clr-accent: hsl(16, 100%, 66%);
+  --clr-light-100: hsl(0, 0%, 100%);
+
+  /* typography */
+  --ff-main: monospace;
+  --fs-400: 0.875rem;
+  --fs-500: 1rem;
+  --fs-900: 3rem;
+
+  --fw-500: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-primary);
+  font-size: var(--fs-400);
+  display: grid;
+  justify-content: center;
+  font-family: var(--ff-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Utility classes */
+
+.btn {
+  cursor: pointer;
+  border: 0;
+}
+
+/* TIMER */
+
+.timer {
+  position: relative;
+  min-width: 370px;
+  height: fit-content;
+  display: grid;
+  gap: 2rem;
+  background-color: var(--clr-light-100);
+  padding: 2rem;
+}
+
+.timer__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer__header h1 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-500);
+}
+
+.timer__header svg {
+  width: var(--fs-500);
+}
+
+.timer__counter-container {
+  display: grid;
+  gap: 1em;
+  text-align: center;
+}
+
+.timer__counter {
+  font-size: var(--fs-900);
+}
+
+.timer__since-contractions {
+  font-weight: var(--fw-500);
+}
+
+.timer__button {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--clr-accent);
+  color: var(--clr-light-100);
+  padding: 1em 2em;
+  border-radius: 100vh;
+  font-weight: var(--fw-500);
+  transition: all 0.5s ease-in-out;
+}
+
+.start {
+  background-color: var(--clr-primary);
+}
+
+.timer__results {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.timer__results th {
+  color: var(--clr-secondary);
+}
+
+.timer__results tr {
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.timer__results tr[data-bg="gray"] {
+  background-color: var(--clr-secondary);
+}
+
+.timer__results td {
+  padding-block: 0.5em;
+}
